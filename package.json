@@ -8,7 +8,7 @@
   ],
   "name": "apn-rest",
   "description": "A simple rest interface to node-apn (https://github.com/node-apn/node-apn)",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/Jaumo/apn-rest",
   "repository": {
     "type": "git",
