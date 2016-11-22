@@ -17,12 +17,7 @@ module.exports = {
 		port: 8089,
 	},
 	log: {
-		debug: true,
-		syslog: {
-			enable: true,
-			tag: 'apn-rest',
-			facility: 'LOG_DAEMON',
-		},
+		debug: true
 	},
 	apn: {
 		key: "/path/to/key.p8",
@@ -35,31 +30,11 @@ module.exports = {
 
 ## Usage
 
-### In foreground
-
 	apn-rest -c /path/to/configuration
-
-### As daemon
-
-apn-rest can be run as daemon. It can be used as an init script and supports the following commands
-
-	start, restart, stop, status
-
-If you want to run apn-rest without config arguement, the configuration must be placed in /etc/apn-rest.conf.
-
-The following command starts apn-rest as a daemon with config file located in /etc/apn-rest/node1.conf
-
-	apn-rest start -c /etc/apn-rest/node1.conf
-
-To stop it, use the following command
-
-	apn-rest stop -c /etc/apn-rest/node1.conf
 
 ### Logging
 
-By default, apn-rest is logging to stdout if it's not started as a daemon.
-In daemon mode it's logging to syslog, if enabled. If syslog is not enabled,
-and apn-rest is running as daemon, it's logging to /dev/null.
+By default, apn-rest is logging to stdout
 
 ### REST Interface
 
