@@ -1,0 +1,5 @@
+.idea
+*.log
+*.pid
+*.p8
+node_modules
