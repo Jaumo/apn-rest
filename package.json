@@ -23,7 +23,7 @@
   "dependencies": {
     "apn": ">= 2.1.2",
     "ain2": ">= 2.0.0",
-    "nomnom": ">= 1.8.1"
+    "options-parser": ">= 0.4.0"
   },
   "devDependencies": {},
   "licenses": [

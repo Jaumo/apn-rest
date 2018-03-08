@@ -6,24 +6,18 @@ var log = require('./lib/log.js'),
 		path = require('path'),
 		apn = require('apn');
 
-var config = {};
-
 // parse options
-var options = require("nomnom").options({
-	config: {
-		abbr: 'c',
-		metavar: 'FILE',
-		default: '/etc/apn-rest.conf',
-		help: 'Config file to use'
-	}
-}).parseArgs();
+var options = require('options-parser').parse({
+	config: {short: 'c', default: '/etc/apn-rest.conf', help: 'Config file to use'}
+}).opt;
 
 // check config file
 if (!fs.existsSync(options.config)) {
 	log.error('invalid config file ' + options.config);
 	process.exit(1);
 }
-config = require(path.resolve(__dirname, options.config));
+
+var config = require(path.resolve(__dirname, options.config));
 
 log.setConfig(config.log);
 log.info("Starting apn-rest with config file " + options.config);
