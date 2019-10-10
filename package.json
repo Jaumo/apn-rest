@@ -1,9 +1,9 @@
 {
   "author": "Benjamin Roth <benjamin.roth@jaumo.com>",
-  "contributors" : [
+  "contributors": [
     {
-     "name": "Benjamin Roth",
-     "email": "benjamin.roth@jaumo.com"
+      "name": "Benjamin Roth",
+      "email": "benjamin.roth@jaumo.com"
     }
   ],
   "name": "apn-rest",
@@ -21,7 +21,7 @@
     "node": ">= 4.6.0"
   },
   "dependencies": {
-    "apn": ">= 2.1.2",
+    "apn": "node-apn/node-apn#3.0.0",
     "ain2": ">= 2.0.0",
     "options-parser": ">= 0.4.0"
   },
